@@ -1,0 +1,29 @@
+// @NOTE Change value of these variable to change the button
+// bg and fg color
+$button-hero-bg: linear-gradient(to right, $orange-002, $orange-001);
+$button-hero-fg: $white-color;
+
+.button-hero {
+	@include button-reset;
+	background: $button-hero-bg;
+	color: $button-hero-fg;
+
+	&.is-fullrounded {
+		border-radius: 1000px;
+	}
+	&.has-shadow {
+		&::before {
+			content: "";
+			width: $button-size * 2;
+			height: $button-size;
+			border-radius: 100%;
+			filter: blur(10px);
+			position: absolute;
+			top: 15px;
+			z-index: -1;
+			opacity: .5;
+			background: inherit;
+		}
+	}
+	
+}

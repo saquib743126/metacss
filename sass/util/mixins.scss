@@ -1,0 +1,14 @@
+@mixin button-reset {
+	height: $button-size;
+	padding-left: $button-hpadding;
+	padding-right: $button-hpadding;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid transparent;
+	font-size: $button-font-size;
+	font-weight: 600;
+	color: $black-003;
+	position: relative;
+	z-index: 2;
+}

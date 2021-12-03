@@ -1,0 +1,50 @@
+.hero-section {
+	min-height: 100vh;
+	background-color: #22221A;
+}
+
+.hero-section .hero-section-wrapper {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.hero-section .hero-section-texts {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	max-width: 600px;
+	flex: 1;
+}
+
+.hero-title, .hero-subtitle {
+	color: #FFFFFF;
+	line-height: 1;
+	margin-bottom: 32px;
+}
+
+.hero-title {
+	font-size: 72px;
+	font-weight: 700;
+}
+
+.hero-subtitle {
+	font-size: 32px;
+	font-weight: 400;
+
+}
+
+.hero-section .hero-section-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+.hero-section-image .hero-image {
+	width: 400px;
+	height: 600px;
+		object-fit: cover;
+}
+

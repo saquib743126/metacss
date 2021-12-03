@@ -1,0 +1,22 @@
+.container {
+	width: 100%;
+	max-width: $container-width;
+	margin: 0 auto;
+}
+
+.logo-text {
+	color: #333;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+/*
+body {
+padding: 200px;
+		 background-color: #000000;
+}
+*/
+
+.event-none {
+	pointer-events: none;
+}

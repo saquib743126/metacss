@@ -1,0 +1,78 @@
+.button {
+	@include button-reset;
+	background-color: $black-001;
+	color: $black-003;
+
+	&:hover, &:focus {
+		background-color: $black-002;
+	}
+
+	&:active:not(:disabled) {
+		position: relative;
+		right: 1px;
+		top: 1px;
+	}	
+
+	&[disabled], .is-disabled {
+		background-color: $black-006;
+		color: rgba($black-003, .35);
+		cursor: not-allowed;
+    }
+
+	&.is-primary {
+		background-color: $blue-001;
+		color: $white-color;
+		&:hover, &:focus {
+			background-color: $blue-002;
+		}
+		&[disabled], .is-disabled {
+			background-color: $blue-004;
+			color: rgba($white-color, .35);
+		}
+	}
+
+	&.is-fullrounded {
+		border-radius: $button-radius * 100;
+	}
+
+	&.is-rounded {
+		border-radius: $button-radius;
+	}
+
+	&.is-outlined {
+		border: 2px solid $black-001;
+	    background-color: transparent;
+		&:hover, &:focus {
+			background-color: $black-001;
+		}
+	}
+
+	&.has-icon-left {
+		.icon {
+			margin-left:0.25rem;
+		}
+	}
+
+	&.has-icon-right {
+		.icon {
+			margin-right:0.25rem;
+		}
+	}
+
+	&.is-loading {
+		color: transparent;
+
+		&::after {
+			content: "";
+			width: $button-size * 0.4;
+			height: $button-size * 0.4;
+			border: 2px solid $white-color;
+			border-right: 2px solid transparent;
+			border-radius: 100%;
+			position: absolute;
+			animation: spin 500ms linear infinite;
+		}
+	}
+
+}
+
