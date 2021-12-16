@@ -1,0 +1,67 @@
+.example-001 {
+	.hero-section.is-white {
+		background-color: $white-color;
+	}
+	.hero-title, .hero-subtitle {
+		color: $black-005;
+	}
+	.button-hero {
+		background: #4182F2;
+	}
+	.hero-section-image {
+		overflow: visible;
+	}
+	.hero-image-wrapper {
+		width: 500px;
+		height: 500px;
+		background-color: transparent;
+		.hero-image {
+			width: 500px;
+			height: 500px;
+			padding-top: 0;
+			border-radius: 48px;
+			box-shadow: 20px 20px 40px rgba($black-color, .2);
+		}
+		position: relative;
+		z-index: 2;
+	}
+	.hero-half-cover-image {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 50vw;
+		z-index: 1;
+		background-size: cover;
+		background-position: top left;
+		opacity: .2;
+	}
+
+	.hero-card {
+		width: 100%;
+		max-width: 430px;
+		border-radius: 40px;
+		overflow: hidden;
+		background-color: $white-color;
+		box-shadow: 20px 20px 40px rgba($black-color, .1);
+		position: absolute;
+		z-index: 9;
+		left: -50px;
+		bottom: -80px;
+		&-head {
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #3379F2;
+			font-size: 24px;
+			color: $white-color;
+			font-weight: 600;
+		}
+		&-body {
+			padding: 20px 20px 40px 20px;
+			font-size: 1rem;
+			color: $black-005;
+		}
+	}
+}

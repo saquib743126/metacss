@@ -1,0 +1,45 @@
+.hero-section-04 {
+	min-height: 100vh;
+	background-color: #22221A;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+
+
+
+.hero-section-04 .hero-section-texts {
+	width: 100%;
+	max-width: 60%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 1rem;
+}
+
+
+.hero-title, .hero-subtitle {
+	color: #FFFFFF;
+	line-height: 1.25;
+	margin-bottom: 2rem;
+}
+
+.hero-title {
+	font-size: 72px;
+	font-weight: 700;
+}
+
+.hero-subtitle {
+	font-size: 32px;
+	font-weight: 400;
+
+}
+
+.hero-cta .button-hero{
+	margin-right: 1rem;
+}
+
+
