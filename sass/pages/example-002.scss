@@ -1,0 +1,41 @@
+.example-002 {
+	.navbar {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 9;
+		background-color: transparent;
+	}
+
+	.hero-section {
+		background: url('assets/img/pattern-01.png'), linear-gradient(to right, #EAEBFF, #EAEBFF);
+
+		.hero-title, .hero-subtitle {
+			color: #222222;
+		}
+
+		.hero-section-bar {
+			background: linear-gradient(to right, $primary-003, $primary-002);
+			padding-top: 50px;
+			padding-bottom: 50px;
+
+			.hero-section-bar-wrapper {
+				display: flex;
+				justify-content: space-between;
+				.house-card {
+					width: 300px;
+					height: 380px;
+					// @TODO Exatract box-shadows style in separate class with size modifier
+					box-shadow: 20px 20px 40px rgba($black-color, 0.2);
+					img {
+						width: 300px;
+						height: 380px;
+						object-fit: cover;
+						object-position: center;
+					}
+				}
+			}
+		}
+	}
+
+}
