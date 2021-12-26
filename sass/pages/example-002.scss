@@ -13,7 +13,67 @@
 		.hero-title, .hero-subtitle {
 			color: #222222;
 		}
+		.hero-cta{
+			.button{
+				border-color: $orange-005;
+				color:  $orange-005;
 
+			}
+		}
+		.hero-section-image{
+			overflow: visible;
+			.hero-image-wrapper{
+				height: 600px;
+				width: 600px;
+				box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
+				position: relative;
+
+				.hero-image{
+					height: 600px;
+					width: 600px;
+					object-fit: cover;
+					padding-top: 0px;
+
+				}
+				.particles{
+					height:14px;
+					width:14px;
+					background-color:#c6d8e2;
+					position: absolute;
+
+					&::before {
+						content: "";
+						width: 12px;
+						height: 12px;
+						position: absolute;
+						top:-12px;
+						left:-16px;
+						background-color:#c6d8e2;
+
+					}
+					&::after {
+						content: "";
+						width: 8px;
+						height: 8px;
+						position: absolute;
+						top:4px;
+						left:20px;
+						background-color:#c6d8e2;
+
+
+					}
+					&.no-01{
+						top:-32px;
+						left:20px;
+					}
+					&.no-02{
+						bottom:-32px;
+						right:20px;
+					}
+
+				}
+			}
+		}
 		.hero-section-bar {
 			background: linear-gradient(to right, $primary-003, $primary-002);
 			padding-top: 50px;
@@ -32,10 +92,54 @@
 						height: 380px;
 						object-fit: cover;
 						object-position: center;
+						
 					}
 				}
 			}
 		}
+		.hero-card {
+		width: 100%;
+		max-width: 300px;
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: $white-color;
+		box-shadow: 20px 20px 40px rgba($black-color, .1);
+		position: absolute;
+		z-index: 9;
+		left: 350px;
+		top: 250px;
+		&-head {
+			/*height: 100px;
+			align-items: center;
+			justify-content: center;*/
+			display: flex;
+			font-size: 1rem;
+			color: $orange-005;
+			font-weight: 600;
+			text-align: left;
+			margin-left: 1rem;
+			margin-top: 1rem;
+		}
+		&-body {
+			padding: 20px 20px;
+			font-size: 1rem;
+			color: $black-005;
+			margin-top: -1rem;
+		}
+		&::after{
+			content: "";
+			width: 32px;
+			height:64px;
+			position: absolute;
+			top:0px;
+			right:16px;
+			background-color:$orange-005;
+
+
+		}
+
 	}
+	}
+
 
 }
