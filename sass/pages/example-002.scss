@@ -13,137 +13,66 @@
 		.hero-title, .hero-subtitle {
 			color: #222222;
 		}
-
+		.hero-cta{
+			.button{
+				border-color: $orange-005;
+				color:  $orange-005;
+			}
+		}
 		.hero-section-image {
 			overflow: visible;
-
 			.hero-image-wrapper {
+				height: 600px;
+				width: 600px;
+				box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
 				position: relative;
-				box-shadow: 20px 20px 40px rgba($black-color, 0.2);
 
-				.hero-image {
-					padding-top: 0;
+				.hero-image{
+					height: 600px;
+					width: 600px;
+					object-fit: cover;
+					padding-top: 0px;
+
 				}
-
-				.particles-no-01, .particles-no-02 {
-					width: 20px;;
-					height: 20px;;
-					background-color: $blue-002;
+				.particles{
+					height:14px;
+					width:14px;
+					background-color:#c6d8e2;
 					position: absolute;
-					z-index: 10;
-				}
-
-				.particles-no-01 {
-					left: 10px;
-					top: -40px;
 
 					&::before {
 						content: "";
-						width: 15px;
-						height: 15px;
-						background-color: $blue-002;
+						width: 12px;
+						height: 12px;
 						position: absolute;
-						z-index: 13;
-						left: -20px;
-						top: -20px;
-					}
+						top:-12px;
+						left:-16px;
+						background-color:#c6d8e2;
 
+					}
 					&::after {
 						content: "";
-						width: 10px;
-						height: 10px;
-						background-color: $blue-002;
+						width: 8px;
+						height: 8px;
 						position: absolute;
-						z-index: 13;
-						right: -20px;
-						bottom: 50%;
-						transform: translateY(50%);
-					}
+						top:4px;
+						left:20px;
+						background-color:#c6d8e2;
 
-
-				}
-
-				.particles-no-02 {
-					right: -10px;
-					bottom: -60px;
-
-					&::before {
-						content: "";
-						width: 15px;
-						height: 15px;
-						background-color: $blue-002;
-						position: absolute;
-						z-index: 13;
-						left: -20px;
-						top: -20px;
-					}
-
-					&::after {
-						content: "";
-						width: 10px;
-						height: 10px;
-						background-color: $blue-002;
-						position: absolute;
-						z-index: 13;
-						right: -20px;
-						bottom: 50%;
-						transform: translateY(50%);
-					}
-				}
-
-				.hero-card {
-					width: 100%;
-					max-width: 340px;
-					border-radius: 12px;
-					background-color: $white-color;
-					box-shadow: 20px 20px 40px rgba($black-color, 0.2);
-					position: absolute;
-					right: -120px;
-					top: 250px;
-					z-index: 9;
-
-					&::after {
-					content: "";
-					width: 40px;
-					height: 80px;
-					background-color: $orange-005;
-					position: absolute;
-					right: 20px;
-					top: 0;
-					z-index: 11;
-				}
-
-
-
-					.hero-card-head {
-						padding: 20px;
-						padding-bottom: 10px;
-						color: $orange-005;
-						font-weight: 600;
-					}
-
-					.hero-card-body {
-						padding: 0 20px;
-						padding-bottom: 20px;
-						font-weight: 400;
-						position: relative;
-						z-index: 12;
 
 					}
-
-				
-
-				
+					&.no-01{
+						top:-32px;
+						left:20px;
+					}
+					&.no-02{
+						bottom:-32px;
+						right:20px;
+					}
 
 				}
 			}
 		}
-
-
-	
-		
-
-
 
 		.hero-section-bar {
 			background: linear-gradient(to right, $primary-003, $primary-002);
@@ -164,8 +93,48 @@
 						height: 380px;
 						object-fit: cover;
 						object-position: center;
+						
 					}
 				}
+			}
+		}
+		.hero-card {
+			width: 100%;
+			max-width: 300px;
+			border-radius: 8px;
+			overflow: hidden;
+			background-color: $white-color;
+			box-shadow: 20px 20px 40px rgba($black-color, .1);
+			position: absolute;
+			z-index: 9;
+			left: 350px;
+			top: 250px;
+			&-head {
+				/*height: 100px;
+				align-items: center;
+				justify-content: center;*/
+				display: flex;
+				font-size: 1rem;
+				color: $orange-005;
+				font-weight: 600;
+				text-align: left;
+				margin-left: 1rem;
+				margin-top: 1rem;
+			}
+			&-body {
+				padding: 20px 20px;
+				font-size: 1rem;
+				color: $black-005;
+				margin-top: -1rem;
+			}
+			&::after{
+				content: "";
+				width: 32px;
+				height:64px;
+				position: absolute;
+				top:0px;
+				right:16px;
+				background-color:$orange-005;
 			}
 		}
 	}
