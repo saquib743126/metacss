@@ -1,13 +1,20 @@
 // @NOTE Change value of these variable to change the button
 // bg and fg color
-$button-hero-bg: linear-gradient(to right, $orange-002, $orange-001);
+$button-hero-bg: linear-gradient(to right, $orange-006, $orange-004);
 $button-hero-fg: $white-color;
+$button-hero-padding-x-md: 2.5rem;
+$button-hero-padding-x-lg: 3.25rem;
+$button-hero-height-lg: 3rem;
 
 .button-hero {
 	@include button-reset;
 	background: $button-hero-bg;
 	color: $button-hero-fg;
+	border-width: 0;
 
+	&.is-rounded {
+		border-radius: $button-radius;
+	}
 	&.is-fullrounded {
 		border-radius: 1000px;
 	}
@@ -25,5 +32,13 @@ $button-hero-fg: $white-color;
 			background: inherit;
 		}
 	}
-	
+	&.is-md {
+		padding-left: $button-hero-padding-x-md;
+		padding-right: $button-hero-padding-x-md;
+	}
+	&.is-lg {
+		height: $button-hero-height-lg;
+		padding-left: $button-hero-padding-x-lg;
+		padding-right: $button-hero-padding-x-lg;
+	}
 }

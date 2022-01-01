@@ -1,3 +1,29 @@
+$button-padding-x-md: 2.5rem;
+$button-padding-x-lg: 3.25rem;
+$button-height-lg: 3rem;
+
+// @TODO Gray color button variables?
+
+$button-primary-bg-color: 				$primary-005;
+$button-primary-hover-bg-color: 		$primary-007;
+$button-primary-disabled-bg-color: 		$primary-004;
+
+$button-blue-bg-color: 					$blue-005;
+$button-blue-hover-bg-color: 			$blue-007;
+$button-blue-disabled-bg-color: 		$blue-004;
+
+$button-green-bg-color: 				$green-005;
+$button-green-hover-bg-color: 			$green-007;
+$button-green-disabled-bg-color: 		$green-004;
+
+$button-red-bg-color: 					$red-005;
+$button-red-hover-bg-color: 			$red-007;
+$button-red-disabled-bg-color: 			$red-004;
+
+$button-orange-bg-color: 				$orange-005;
+$button-orange-hover-bg-color: 			$orange-007;
+$button-orange-disabled-bg-color: 		$orange-004;
+
 .button {
 	@include button-reset;
 	background-color: $black-001;
@@ -7,7 +33,7 @@
 		background-color: $black-002;
 	}
 
-	&:active:not(:disabled) {
+	&:active:not(:disabled), &.is-loading:not(:disabled) {
 		position: relative;
 		right: 1px;
 		top: 1px;
@@ -19,17 +45,186 @@
 		cursor: not-allowed;
     }
 
-	&.is-primary {
-		background-color: $blue-001;
-		color: $white-color;
+	&.is-outlined {
+		border: 2px solid $black-001;
+	    background-color: transparent;
 		&:hover, &:focus {
-			background-color: $blue-002;
+			background-color: $black-001;
 		}
-		&[disabled], .is-disabled {
-			background-color: $blue-004;
-			color: rgba($white-color, .35);
+		// @NOTE disalbed state styles is coming from top
+		// so no need to specify every styles just need to control bg color.
+		&[disabled], &.is-disabled {
+			background-color: transparent;
 		}
 	}
+
+	&.is-primary {
+		background-color: $button-primary-bg-color;
+		color: $white-color;
+		&:hover, &:focus {
+			background-color: $button-primary-hover-bg-color;
+		}
+		&[disabled], &.is-disabled {
+			background-color: $button-primary-disabled-bg-color;
+			color: rgba($white-color, .35);
+		}
+		&.is-outlined {
+			border: 2px solid $button-primary-bg-color;
+			background-color: transparent;
+			color: $button-primary-bg-color;
+			&:hover, &:focus {
+				background-color: $button-primary-bg-color;
+				color: $white-color;
+			}
+			&[disabled], &.is-disabled {
+				border: 2px solid $button-primary-disabled-bg-color;
+				background-color: inherit;
+				color: rgba($button-primary-disabled-bg-color, .35);
+			}
+			&.is-loading {
+				background-color: transparent;
+				&::after {
+					border: 2px solid $button-primary-bg-color;
+				}
+			}
+		}
+	}
+	&.is-blue {
+		background-color: $button-blue-bg-color;
+		color: $white-color;
+		&:hover, &:focus {
+			background-color: $button-blue-hover-bg-color;
+		}
+		&[disabled], &.is-disabled {
+			background-color: $button-blue-disabled-bg-color;
+			color: rgba($white-color, .35);
+		}
+		&.is-outlined {
+			border: 2px solid $button-blue-bg-color;
+			background-color: transparent;
+			color: $button-blue-bg-color;
+			&:hover, &:focus {
+				background-color: $button-blue-bg-color;
+				color: $white-color;
+			}
+			&[disabled], &.is-disabled {
+				border: 2px solid $button-blue-disabled-bg-color;
+				background-color: inherit;
+				color: rgba($button-blue-disabled-bg-color, .35);
+			}
+			&.is-loading {
+				background-color: transparent;
+				&::after {
+					border: 2px solid $button-blue-bg-color;
+				}
+			}
+		}
+	}
+	&.is-green {
+		background-color: $button-green-bg-color;
+		color: $white-color;
+		&:hover, &:focus {
+			background-color: $button-green-hover-bg-color;
+		}
+		&[disabled], &.is-disabled {
+			background-color: $button-green-disabled-bg-color;
+			color: rgba($white-color, .35);
+		}
+		&.is-outlined {
+			border: 2px solid $button-green-bg-color;
+			background-color: transparent;
+			color: $button-green-bg-color;
+			&:hover, &:focus {
+				background-color: $button-green-bg-color;
+				color: $white-color;
+			}
+			&[disabled], &.is-disabled {
+				border: 2px solid $button-green-disabled-bg-color;
+				background-color: inherit;
+				color: rgba($button-green-disabled-bg-color, .35);
+			}
+			&.is-loading {
+				background-color: transparent;
+				&::after {
+					border: 2px solid $button-green-bg-color;
+				}
+			}
+		}
+	}
+	&.is-red {
+		background-color: $button-red-bg-color;
+		color: $white-color;
+		&:hover, &:focus {
+			background-color: $button-red-hover-bg-color;
+		}
+		&[disabled], &.is-disabled {
+			background-color: $button-red-disabled-bg-color;
+			color: rgba($white-color, .35);
+		}
+		&.is-outlined {
+			border: 2px solid $button-red-bg-color;
+			background-color: transparent;
+			color: $button-red-bg-color;
+			&:hover, &:focus {
+				background-color: $button-red-bg-color;
+				color: $white-color;
+			}
+			&[disabled], &.is-disabled {
+				border: 2px solid $button-red-disabled-bg-color;
+				background-color: inherit;
+				color: rgba($button-red-disabled-bg-color, .35);
+			}
+			&.is-loading {
+				background-color: transparent;
+				&::after {
+					border: 2px solid $button-red-bg-color;
+				}
+			}
+		}
+	}
+	&.is-orange {
+		background-color: $button-orange-bg-color;
+		color: $white-color;
+		&:hover, &:focus {
+			background-color: $button-orange-hover-bg-color;
+		}
+		&[disabled], &.is-disabled {
+			background-color: $button-orange-disabled-bg-color;
+			color: rgba($white-color, .35);
+		}
+		&.is-outlined {
+			border: 2px solid $button-orange-bg-color;
+			background-color: transparent;
+			color: $button-orange-bg-color;
+			&:hover, &:focus {
+				background-color: $button-orange-bg-color;
+				color: $white-color;
+			}
+			&[disabled], &.is-disabled {
+				border: 2px solid $button-orange-disabled-bg-color;
+				background-color: inherit;
+				color: rgba($button-orange-disabled-bg-color, .35);
+			}
+			&.is-loading {
+				background-color: transparent;
+				&::after {
+					border: 2px solid $button-orange-bg-color;
+				}
+			}
+		}
+	}
+
+
+    // Size modifiers
+    &.is-md {
+    	padding-left: $button-padding-x-md;
+    	padding-right: $button-padding-x-md;
+    }
+    &.is-lg {
+    	height: $button-height-lg;
+    	padding-left: $button-padding-x-lg;
+    	padding-right: $button-padding-x-lg;
+    }
 
 	&.is-fullrounded {
 		border-radius: $button-radius * 100;
@@ -37,14 +232,6 @@
 
 	&.is-rounded {
 		border-radius: $button-radius;
-	}
-
-	&.is-outlined {
-		border: 2px solid $black-001;
-	    background-color: transparent;
-		&:hover, &:focus {
-			background-color: $black-001;
-		}
 	}
 
 	&.has-icon-left {
@@ -59,20 +246,20 @@
 		}
 	}
 
-	&.is-loading {
-		color: transparent;
+    &.is-loading {
+		color: transparent !important;
+		pointer-events: none;
 
 		&::after {
 			content: "";
 			width: $button-size * 0.4;
 			height: $button-size * 0.4;
 			border: 2px solid $white-color;
-			border-right: 2px solid transparent;
+			border-right: 2px solid transparent !important;
 			border-radius: 100%;
 			position: absolute;
 			animation: spin 500ms linear infinite;
 		}
 	}
-
 }
 
