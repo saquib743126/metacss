@@ -24,6 +24,10 @@ $button-orange-bg-color: 				$orange-005;
 $button-orange-hover-bg-color: 			$orange-007;
 $button-orange-disabled-bg-color: 		$orange-004;
 
+$button-white-bg-color: 				$white-color;
+$button-white-hover-bg-color: 			#F0F0F0;
+$button-white-disabled-bg-color: 		$black-006;
+
 .button {
 	@include button-reset;
 	background-color: $black-001;
@@ -209,6 +213,37 @@ $button-orange-disabled-bg-color: 		$orange-004;
 				background-color: transparent;
 				&::after {
 					border: 2px solid $button-orange-bg-color;
+				}
+			}
+		}
+	}
+	&.is-white {
+		background-color: $button-white-bg-color;
+		color: $black-005;
+		&:hover, &:focus {
+			background-color: $button-white-hover-bg-color;
+		}
+		&[disabled], &.is-disabled {
+			background-color: $button-white-disabled-bg-color;
+			color: rgba($black-005, .35);
+		}
+		&.is-outlined {
+			border: 2px solid $button-white-bg-color;
+			background-color: transparent;
+			color: $button-white-bg-color;
+			&:hover, &:focus {
+				background-color: $button-white-bg-color;
+				color: $black-005;
+			}
+			&[disabled], &.is-disabled {
+				border: 2px solid $button-white-disabled-bg-color;
+				background-color: inherit;
+				color: rgba($button-white-disabled-bg-color, .35);
+			}
+			&.is-loading {
+				background-color: transparent;
+				&::after {
+					border: 2px solid $button-white-bg-color;
 				}
 			}
 		}
