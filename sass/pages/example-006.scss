@@ -1,0 +1,35 @@
+.example-006 {
+	.navbar {	
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 9;	
+		background-color: transparent;
+		.navbar-menu {
+			.navbar-menu-item{
+				.navbar-menu-item-link {
+					color: $white-color;
+				}
+			}
+		}
+	}
+	.hero-section-02 {
+		background: url(/home/saquib/apps/metacss/assets/img/jewellery-bg.png);
+		padding: 60px 0;
+		.hero-title{
+			.head-color {
+				color: $orange-006;
+			}
+
+		}
+		.hero-section-image {
+			max-width: 1000px;
+			padding-top: 40px;
+			.hero-image {
+				border-radius: 12px;
+				padding: 0;
+			}
+		}
+	}
+}
+
